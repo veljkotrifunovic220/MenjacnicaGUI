@@ -98,17 +98,22 @@ public class MenjacnicaGUI extends JFrame {
 		panel.setPreferredSize(new Dimension(140, 50));
 		contentPane.add(panel, BorderLayout.EAST);
 		
-		JButton btnNewButton = new JButton("Dodaj kurs");
-		btnNewButton.setPreferredSize(new Dimension(125, 23));
-		panel.add(btnNewButton);
+		JButton btnDodajKurs = new JButton("Dodaj kurs");
+		btnDodajKurs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new DodajKursGUI().setVisible(true);
+			}
+		});
+		btnDodajKurs.setPreferredSize(new Dimension(125, 23));
+		panel.add(btnDodajKurs);
 		
-		JButton btnNewButton_1 = new JButton("Obri\u0161i kurs");
-		btnNewButton_1.setPreferredSize(new Dimension(125, 23));
-		panel.add(btnNewButton_1);
+		JButton btnObrisiKurs = new JButton("Obri\u0161i kurs");
+		btnObrisiKurs.setPreferredSize(new Dimension(125, 23));
+		panel.add(btnObrisiKurs);
 		
-		JButton btnNewButton_2 = new JButton("Izvr\u0161i zamenu");
-		btnNewButton_2.setPreferredSize(new Dimension(125, 23));
-		panel.add(btnNewButton_2);
+		JButton btnIzvrsiZamenu = new JButton("Izvr\u0161i zamenu");
+		btnIzvrsiZamenu.setPreferredSize(new Dimension(125, 23));
+		panel.add(btnIzvrsiZamenu);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane, BorderLayout.CENTER);
@@ -137,6 +142,11 @@ public class MenjacnicaGUI extends JFrame {
 		addPopup(table, popupMenu);
 		
 		JMenuItem mntmDodajKurs = new JMenuItem("Dodaj kurs");
+		mntmDodajKurs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new DodajKursGUI().setVisible(true);
+			}
+		});
 		popupMenu.add(mntmDodajKurs);
 		
 		JMenuItem mntmObrisiKurs = new JMenuItem("Obri\u0161i kurs");
@@ -149,9 +159,9 @@ public class MenjacnicaGUI extends JFrame {
 		scrollPane_1.setPreferredSize(new Dimension(2, 60));
 		contentPane.add(scrollPane_1, BorderLayout.SOUTH);
 		
-		final JTextArea textArea = new JTextArea();
-		textArea.setBorder(new TitledBorder(null, "STATUS", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		scrollPane_1.setViewportView(textArea);
+		final JTextArea textAreaSTATUS = new JTextArea();
+		textAreaSTATUS.setBorder(new TitledBorder(null, "STATUS", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		scrollPane_1.setViewportView(textAreaSTATUS);
 		
 		JMenuItem mntmOpen = new JMenuItem("Open");
 		mntmOpen.addActionListener(new ActionListener() {
@@ -162,7 +172,7 @@ public class MenjacnicaGUI extends JFrame {
 				
 				if (opcija == JFileChooser.APPROVE_OPTION) {
 					File f = fc.getSelectedFile();
-					textArea.append("Ucitan fajl: " + f.getAbsolutePath() + "\n");
+					textAreaSTATUS.append("Ucitan fajl: " + f.getAbsolutePath() + "\n");
 				}
 			}
 		});
@@ -179,7 +189,7 @@ public class MenjacnicaGUI extends JFrame {
 				
 				if (opcija == JFileChooser.APPROVE_OPTION) {
 					File f = fc.getSelectedFile();
-					textArea.append("Sacuvan fajl: " + f.getAbsolutePath() + "\n");
+					textAreaSTATUS.append("Sacuvan fajl: " + f.getAbsolutePath() + "\n");
 				}
 				
 			}
