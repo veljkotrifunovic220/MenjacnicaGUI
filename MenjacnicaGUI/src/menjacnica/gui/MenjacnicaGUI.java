@@ -51,7 +51,8 @@ public class MenjacnicaGUI extends JFrame {
 	private JPanel contentPane;
 	private JTable table;
 	
-
+	static JTextArea textAreaSTATUS = new JTextArea();
+	
 	/**
 	 * Launch the application.
 	 */
@@ -159,7 +160,7 @@ public class MenjacnicaGUI extends JFrame {
 		scrollPane_1.setPreferredSize(new Dimension(2, 60));
 		contentPane.add(scrollPane_1, BorderLayout.SOUTH);
 		
-		final JTextArea textAreaSTATUS = new JTextArea();
+		
 		textAreaSTATUS.setBorder(new TitledBorder(null, "STATUS", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		scrollPane_1.setViewportView(textAreaSTATUS);
 		

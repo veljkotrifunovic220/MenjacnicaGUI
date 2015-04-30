@@ -86,6 +86,8 @@ public class DodajKursGUI extends JFrame {
 				String dodat = "Dodat = Sifra: " + textFieldSifra.getText() + ", Skraceni naziv: " + textFieldSkraceniNaziv.getText() + 
 						", Prodajni kurs: " + textFieldProdajniKurs.getText() + ", Srednji kurs: " + textFieldSrednjiKurs.getText() + 
 						", Kupovni kurs: " + textFieldKupovniKurs.getText() + ", Naziv: " + textFieldNaziv.getText();
+				
+				MenjacnicaGUI.textAreaSTATUS.append(dodat + "\n");
 			}
 		});
 		btnDodaj.setBounds(10, 214, 151, 23);
