@@ -50,7 +50,7 @@ public class IzvrsiZamenuGUI extends JFrame {
 	public IzvrsiZamenuGUI() {
 		setResizable(false);
 		setTitle("Izvrsi zamenu");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(IzvrsiZamenuGUI.class.getResource("/com/sun/java/swing/plaf/windows/icons/Computer.gif")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(IzvrsiZamenuGUI.class.getResource("/icons/java3.png")));
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 342);
 		contentPane = new JPanel();

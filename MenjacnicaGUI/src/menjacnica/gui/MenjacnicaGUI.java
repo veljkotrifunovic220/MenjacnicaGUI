@@ -80,7 +80,7 @@ public class MenjacnicaGUI extends JFrame {
 			}
 		});
 		setTitle("Menja\u010Dnica");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(MenjacnicaGUI.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MenjacnicaGUI.class.getResource("/icons/java4.png")));
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 659, 416);
 		

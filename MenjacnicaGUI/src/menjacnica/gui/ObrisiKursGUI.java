@@ -44,7 +44,7 @@ public class ObrisiKursGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public ObrisiKursGUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(ObrisiKursGUI.class.getResource("/com/sun/java/swing/plaf/windows/icons/Computer.gif")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(ObrisiKursGUI.class.getResource("/icons/java2.png")));
 		setResizable(false);
 		setTitle("Obrisi kurs");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -141,9 +141,21 @@ public class ObrisiKursGUI extends JFrame {
 		chckbxZaistaObrisiKurs.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (chckbxZaistaObrisiKurs.isSelected()) {
+					textFieldSifra.setEditable(true);
+					textFieldNaziv.setEditable(true);
+					textFieldProdajniKurs.setEditable(true);
+					textFieldKupovniKurs.setEditable(true);
+					textFieldSrednjiKurs.setEditable(true);
+					textFieldSkraceniNaziv.setEditable(true);
 					btnObrisi.setEnabled(true);
 				}
 				else {
+					textFieldSifra.setEditable(false);
+					textFieldNaziv.setEditable(false);
+					textFieldProdajniKurs.setEditable(false);
+					textFieldKupovniKurs.setEditable(false);
+					textFieldSrednjiKurs.setEditable(false);
+					textFieldSkraceniNaziv.setEditable(false);
 					btnObrisi.setEnabled(false);
 				}
 			}

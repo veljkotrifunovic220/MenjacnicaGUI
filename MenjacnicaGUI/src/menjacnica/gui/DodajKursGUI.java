@@ -44,7 +44,7 @@ public class DodajKursGUI extends JFrame {
 	 */
 	public DodajKursGUI() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(DodajKursGUI.class.getResource("/com/sun/java/swing/plaf/windows/icons/Computer.gif")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(DodajKursGUI.class.getResource("/icons/java1.jpg")));
 		setTitle("Dodaj kurs");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 406, 300);
